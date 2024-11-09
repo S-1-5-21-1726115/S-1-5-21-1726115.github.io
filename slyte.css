@@ -32,7 +32,7 @@ body {
 
 /* 标题样式 */
 
-.Headers h1 {
+h1 {
     color: #a75fff;
     text-align: center;
     /* 水平居中标题文本 */
@@ -71,11 +71,12 @@ hr:hover {
 
 /* 其他文本样式 */
 
-.Body h2,
-.Body h3,
-.Body h4,
-.Body h5,
-.Body p {
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     position: relative;
     text-align: center;
     margin: 0 0 10px 0;
@@ -85,10 +86,23 @@ hr:hover {
     transition: color 0.3s ease;
 }
 
-.Body h2:hover,
-.Body h3:hover,
-.Body h4:hover,
-.Body h5:hover,
+code {
+    position: relative;
+    text-align: center;
+    margin: 0 0 10px 0;
+    color: #4caeff;
+    line-height: 1.6;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    transition: color 0.3s ease;
+    font-family: unifont;
+}
+
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover,
+code:hover,
 p:hover {
     color: #ffffffff;
 }
@@ -100,6 +114,10 @@ a {
     color: #2583cc;
     text-decoration: none;
     transition: color 0.3s ease;
+    text-align: center;
+    position: relative;
+    margin: 0 0 10px 0;
+    line-height: 1.6;
 }
 
 a:hover {
