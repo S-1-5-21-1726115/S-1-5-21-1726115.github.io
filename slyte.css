@@ -16,6 +16,7 @@ body {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     padding: 20px;
     /* 防止内容直接贴边 */
     overflow-y: auto;
@@ -82,4 +83,12 @@ hr {
     text-align: center;
     margin: 0 0 10px 0;
     color: #ffffff87;
+}
+
+
+/* 修改超链接样式 */
+
+a {
+    color: #2583cc;
+    text-decoration: none;
 }
