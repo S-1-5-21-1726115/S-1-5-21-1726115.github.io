@@ -1,27 +1,36 @@
-/* 清除默认样式 */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
 /* 页面整体布局 */
 
 body {
     font-family: unifont;
-    height: 100vh;
+    min-height: 100vh;
+    /* 让页面至少填满视口 */
     display: flex;
     justify-content: center;
+    /* 水平居中 */
     align-items: center;
+    /* 垂直居中 */
+    flex-direction: column;
+    /* 纵向排列子元素 */
     background-color: #000000;
     background-image: url('background.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    overflow: hidden;
-    flex-direction: column;
+    padding: 20px;
+    /* 防止内容直接贴边 */
+    overflow-y: auto;
+    /* 启用滚动 */
+}
+
+
+/* 标题样式 */
+
+.Headers h1 {
+    color: #a75fff;
+    text-align: center;
+    /* 水平居中标题文本 */
+    margin: 0;
+    /* 去掉默认的外边距 */
 }
 
 
@@ -43,7 +52,12 @@ hr {
     transform: translateY(50px);
     animation: slideIn 1.5s ease-out forwards;
     position: relative;
+    max-width: 100%;
+    /* 确保容器不会超出宽度 */
 }
+
+
+/* 动画效果 */
 
 @keyframes slideIn {
     0% {
@@ -56,11 +70,13 @@ hr {
     }
 }
 
-.Headers h1 {
-    color: #a75fff;
-}
+
+/* 其他文本样式 */
 
 .Body h2,
+.Body h3,
+.Body h4,
+.Body h5,
 .Body p {
     position: relative;
     text-align: center;
