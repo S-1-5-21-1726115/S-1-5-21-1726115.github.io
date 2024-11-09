@@ -1,0 +1,68 @@
+/* 清除默认样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 页面整体布局 */
+
+body {
+    font-family: unifont;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/background.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+
+/* 分界线样式 */
+
+hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, #5f7fff, #c57bfe);
+    margin: 20px 0;
+}
+
+
+/* 设置文本容器的滑动和渐显效果 */
+
+.Headers,
+.Body {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideIn 1.5s ease-out forwards;
+    position: relative;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Headers h1 {
+    color: #a75fff;
+}
+
+.Body h2,
+.Body p {
+    position: relative;
+    text-align: center;
+    margin: 0 0 10px 0;
+    color: #ffffff87;
+}
