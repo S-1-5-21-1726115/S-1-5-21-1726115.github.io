@@ -1,7 +1,7 @@
 /* 页面整体布局 */
 
 body {
-    font-family: unifont;
+    font-family: "Unifont", sans-serif;
     min-height: 100vh;
     /* 让页面至少填满视口 */
     display: flex;
@@ -12,7 +12,7 @@ body {
     flex-direction: column;
     /* 纵向排列子元素 */
     background-color: #000000;
-    background-image: url('background.png');
+    background-image: url('background.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -20,9 +20,10 @@ body {
     padding: 20px;
     /* 防止内容直接贴边 */
     overflow-y: auto;
+    overflow-x: hidden;
     /* 启用滚动 */
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(15vh);
     animation: slideIn 1.5s ease-out forwards;
     position: relative;
     max-width: 100%;
@@ -33,11 +34,16 @@ body {
 /* 标题样式 */
 
 h1 {
-    color: #a75fff;
+    color: #ff5fc4;
+    /* 初始颜色 */
     text-align: center;
     /* 水平居中标题文本 */
     margin: 0;
     /* 去掉默认的外边距 */
+    animation: TextAnimation1 5s infinite linear alternate;
+    /* 文本动画效果 */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    /* 文本阴影 */
 }
 
 
@@ -60,11 +66,23 @@ hr:hover {
 @keyframes slideIn {
     0% {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(15vh);
     }
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes TextAnimation1 {
+    0% {
+        color: #645fff;
+    }
+    50% {
+        color: #b87bfe;
+    }
+    100% {
+        color: #ff5fc4;
     }
 }
 
@@ -94,7 +112,7 @@ code {
     line-height: 1.6;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     transition: color 0.3s ease;
-    font-family: unifont;
+    font-family: Unifont;
 }
 
 h2:hover,
@@ -102,9 +120,18 @@ h3:hover,
 h4:hover,
 h5:hover,
 h6:hover,
-code:hover,
 p:hover {
     color: #ffffffff;
+}
+
+.Blur::before {
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    transition: color 0.3s ease;
+}
+
+.Blur::before:hover {
+    opacity: 1;
 }
 
 
@@ -139,4 +166,14 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-thumb:hover {
     background-color: #555;
+}
+
+
+/* 加载自定义字体 */
+
+@font-face {
+    font-family: "Unifont";
+    src: url("unifont.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
 }
