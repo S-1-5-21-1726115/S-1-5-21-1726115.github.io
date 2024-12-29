@@ -4,6 +4,8 @@
 <head>
     <title>文档样式:默认</title>
     <link rel="stylesheet" type="text/css" href="slyte.css">
+    <link href="prism.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
 </head>
 
 <body>
@@ -11,13 +13,14 @@
         <h1>
             样式:默认
         </h1>
-        <p>↓下面的分割线使用<code lang="text/html">&lt;hr&gt;</code></p>
+        <p>↓下面的分割线使用<code class="language-markup">&lt;hr&gt;</code></p>
         <hr>
     </div>
     <div class="Body">
         <p>
             其实还是要手动指定的，不然就是HTML默认样式（小声） 通过<br>
-            <code lang="text/html">&lt;link rel="stylesheet" type="text/css" href="slyte.css"&gt;</code><br>使用此样式<br>
+            <pre><code class="language-markup">&lt;link rel="stylesheet" type="text/css" href="slyte.css"&gt;</code></pre><br>
+            <p>使用此样式</p><br>
             <h1>一级标题</h1>
             <h2>二级标题</h2>
             <h3>三级标题</h3>
@@ -27,73 +30,20 @@
         </p>
         <p>
             代码如下:<br>
-            <code lang="text/html">
-                &lt;h1&gt;一级标题&lt;/h1&gt;<br>
-                &lt;h2&gt;二级标题&lt;/h2&gt;<br>
-                &lt;h3&gt;三级标题&lt;/h3&gt;<br>
-                &lt;h4&gt;四级标题&lt;/h4&gt;<br>
-                &lt;h5&gt;五级标题&lt;/h5&gt;<br>
-                &lt;h6&gt;六级标题&lt;/h6&gt;<br>             
-            </code>
+            <pre><code class="language-markup"><textarea>
+<h1>一级标题</h1>
+<h2>二级标题</h2>
+<h3>三级标题</h3>
+<h4>四级标题</h4>
+<h5>五级标题</h5>
+<h6>六级标题</h6></textarea></code></pre>
         </p>
         <hr>
         <p>
             使用&lt;code&gt;展示代码<br>代码的颜色会有点不同的<br> 使用&lt;hr&gt;创建分割线
             <br>注意细节<br>将鼠标移动到分割线上试试?<br> 段落文本使用&lt;p&gt;创建，将鼠标移到这段段落文本上试试?
         </p>
-        <a href="https://www.bilibili.com">这是一个超链接！鼠标移到上面去会有神奇的效果oh~</a>
-    </div>
-    <div class="PageCode">
-        <p>本页代码:<br></p>
-        <code lang="text/html">
-            &lt;!DOCTYPE html&gt;
-            &lt;html&gt;<br>
-            <br>
-            &lt;head&gt;<br>
-                &lt;title&gt;文档样式:默认&lt;/title&gt;<br>
-                &lt;link rel="stylesheet" type="text/css" href="slyte.css"&gt;<br>
-            &lt;/head&gt;<br>
-            <br>
-            &lt;body&gt;<br>
-                &lt;div class="Headers"&gt;<br>
-                    &lt;h1&gt;<br>
-                        样式:默认<br>
-                    &lt;/h1&gt;<br>
-                    &lt;p&gt;↓下面的分割线使用&lt;code lang="text/html"&gt;&lt;hr&gt;&lt;/code&gt;&lt;/p&gt;<br>
-                    &lt;hr&gt;<br>
-                &lt;/div&gt;<br>
-                &lt;div class="Body"&gt;<br>
-                    &lt;p&gt;<br>
-                        其实还是要手动指定的，不然就是HTML默认样式（小声） 通过&lt;br&gt;<br>
-                        &lt;code lang="text/html"&gt;&lt;link rel="stylesheet" type="text/css" href="slyte.css"&gt;&lt;/code&gt;&lt;br&gt;使用此样式&lt;br&gt;<br>
-                        &lt;h1&gt;一级标题&lt;/h1&gt;<br>
-                        &lt;h2&gt;二级标题&lt;/h2&gt;<br>
-                        &lt;h3&gt;三级标题&lt;/h3&gt;<br>
-                        &lt;h4&gt;四级标题&lt;/h4&gt;<br>
-                        &lt;h5&gt;五级标题&lt;/h5&gt;<br>
-                        &lt;h6&gt;六级标题&lt;/h6&gt;<br>
-                    &lt;/p&gt;<br>
-                    &lt;p&gt;<br>
-                        代码如下:&lt;br&gt;<br>
-                        &lt;code lang="text/html"&gt;<br>
-                            &lt;h1&gt;一级标题&lt;/h1&gt;&lt;br&gt;<br>
-                            &lt;h2&gt;二级标题&lt;/h2&gt;&lt;br&gt;<br>
-                            &lt;h3&gt;三级标题&lt;/h3&gt;&lt;br&gt;<br>
-                            &lt;h4&gt;四级标题&lt;/h4&gt;&lt;br&gt;<br>
-                            &lt;h5&gt;五级标题&lt;/h5&gt;&lt;br&gt;<br>
-                            &lt;h6&gt;六级标题&lt;/h6&gt;&lt;br&gt;<br>         
-                        &lt;/code&gt;<br>
-                    &lt;/p&gt;<br>
-                    &lt;hr&gt;<br>
-                    &lt;p&gt;<br>
-                        使用&lt;code&gt;展示代码&lt;br&gt;代码的颜色会有点不同的&lt;br&gt; 使用&lt;hr&gt;创建分割线<br>
-                        &lt;br&gt;注意细节&lt;br&gt;将鼠标移动到分割线上试试?&lt;br&gt; 段落文本使用&lt;p&gt;创建，将鼠标移到这段段落文本上试试?<br>
-                    &lt;/p&gt;<br>
-                    &lt;a href="https://www.bilibili.com"&gt;这是一个超链接！鼠标移到上面去会有神奇的效果oh~&lt;/a&gt;<br>
-                &lt;/div&gt;<br>
-            &lt;/body&gt;<br>
-            &lt;/html&gt;<br>
-        </code>
+        <p><a href="https://www.bilibili.com">这是一个超链接！鼠标移到上面去会有神奇的效果oh~</a></p>
     </div>
     <div class="Footers">
         <hr>
