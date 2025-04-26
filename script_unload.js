@@ -5,7 +5,7 @@ function main() {
     support_javascript_link = document.getElementById("supported")
     support_javascript_link.textContent = "回到首页"
     support_javascript_link.addEventListener("click", function() {
-        window.location.href = "https://S-1-5-21-1726115.github.io"
+        window.location.href = "/main.html"
     })
     mainpage = document.getElementById("mainpage")
     mainpage.addEventListener("click", function() {
@@ -15,7 +15,7 @@ function main() {
             elements[i].style.animationDelay = i * 500 + "ms"
         }
         setTimeout(function() {
-            window.location.href = "https://S-1-5-21-1726115.github.io/main.html"
+            window.location.href = "/main.html"
         }, 500 * document.body.children.length + 1500)
     })
 }
