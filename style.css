@@ -1,0 +1,130 @@
+#warning {
+    border: 2px solid #ffd700;
+    background-color: #fffacd;
+    color: #8b8000;
+    padding: 10px;
+    text-align: center;
+    width: 60%;
+    position: relative;
+    left: 20%
+}
+
+#warning::before {
+    content: "⚠️警告:";
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    font-size: 32px;
+}
+
+body>*:not(.loaded) {
+    opacity: 0;
+    transform: translateY(100px);
+    filter: blur(8px);
+}
+
+body>.loaded {
+    animation: slide-in 1s ease-out forwards;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+        filter: blur(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+        filter: blur(8px);
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+        filter: blur(8px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+        filter: blur(0px);
+    }
+}
+
+
+/* 从主页面CSS移植过来的发光文本 */
+
+.RedLight {
+    color: #ff0000;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.6), 0 0 15px rgba(255, 0, 0, 0.4)
+}
+
+.YellowLight {
+    color: #ffff00;
+    text-shadow: 0 0 5px rgba(255, 255, 0, 0.8), 0 0 10px rgba(255, 255, 0, 0.6), 0 0 15px rgba(255, 255, 0, 0.4)
+}
+
+.Light {
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.4)
+}
+
+.GreenLight {
+    color: #00ff00;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.6), 0 0 15px rgba(0, 255, 0, 0.4)
+}
+
+.CyanLight {
+    color: #00ffff;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.8), 0 0 10px rgba(0, 255, 255, 0.6), 0 0 15px rgba(0, 255, 255, 0.4)
+}
+
+.BlueLight {
+    color: #0000ff;
+    text-shadow: 0 0 5px rgba(0, 0, 255, 0.8), 0 0 10px rgba(0, 0, 255, 0.6), 0 0 15px rgba(0, 0, 255, 0.4)
+}
+
+.PinkLight {
+    color: #ff00ff;
+    text-shadow: 0 0 5px rgba(255, 0, 255, 0.8), 0 0 10px rgba(255, 0, 255, 0.6), 0 0 15px rgba(255, 0, 255, 0.4)
+}
+
+.PurpleLight {
+    color: #7f00ff;
+    text-shadow: 0 0 5px rgba(127, 0, 255, 0.8), 0 0 10px rgba(127, 0, 255, 0.6), 0 0 15px rgba(127, 0, 255, 0.4)
+}
+
+
+/* 还移植了些什么呢? */
+
+
+/* 伪链接 */
+
+*:not(a).DisableLink {
+    color: #2583cc;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    text-align: center;
+    position: relative;
+    margin: 0 0 10px 0;
+    line-height: 1.6;
+    text-decoration: underline;
+}
+
+*:not(a).DisableLink:hover {
+    color: #9f9f9f;
+    text-decoration: line-through underline;
+}
+
+
+/* 被模糊化的文本 */
+
+.Blur {
+    filter: blur(8px);
+    transition: all 0.8s ease;
+}
+
+.Blur:hover {
+    filter: blur(0px);
+}
