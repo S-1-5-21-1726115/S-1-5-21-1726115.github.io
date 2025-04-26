@@ -16,9 +16,7 @@ function main() {
         }
         setTimeout(function() {
             document.documentElement.innerHTML = ""
-            fetch("main.html")
-                .then(response => response.text())
-                .then(data => document.documentElement.innerHTML = data)
+            window.location.href = "https://S-1-5-21-1726115.github.io/main.html"
         }, 500 * document.body.children.length + 1500)
     })
 }
